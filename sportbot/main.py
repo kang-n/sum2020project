@@ -16,6 +16,9 @@ async def on_ready():
 async def on_message(message):
     if message.author == client.user:
         return 
+    
+    if message.content.startswith('!help'):
+        await message.channel.send('```Help is on the way! Here are some useful functions:```')
 
     if message.content.startswith('$hello'):
         await message.channel.send('Hello!')

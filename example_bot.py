@@ -1,5 +1,6 @@
 import discord
 import os
+import sportsreference
 
 from dotenv import load_dotenv
 
@@ -19,5 +20,7 @@ async def on_message(message):
 
     if message.content.startswith('$hello'):
         await message.channel.send('Hello!')
+
+
 
 client.run(TOKEN)
