@@ -1,5 +1,6 @@
 import discord
 import os
+from sb_Football import on_fb
 
 from dotenv import load_dotenv
 
@@ -15,7 +16,10 @@ async def on_ready():
 @client.event
 async def on_message(message):
     if message.author == client.user:
-        return 
+        return
+
+    if message.content.startswith('!fb'):
+        await on_fb(message)
 
     if message.content.startswith('$hello'):
         await message.channel.send('Hello!')

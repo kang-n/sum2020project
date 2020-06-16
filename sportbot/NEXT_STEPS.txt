@@ -1,0 +1,30 @@
+What we have:
+
+    We have found the players we are trying to access info for
+    They are all currently stored in the array samenameplayers
+    (These are the actual roster.Player variables that we will
+    pull information from)
+
+    The bot will currently PRODUCE a list of names like so:
+
+    Input: !fb.player Josh Allen
+    Output:
+    Josh Allen 1991
+    Josh Allen 1996
+    Josh Allen 1997
+
+    corresponding to all players of the same name found (w/ birthdates)
+
+How to proceed:
+
+    The hard part:
+        
+        The user needs to be able to choose which "Josh Allen"
+        via typing in a command like '!1' or '!2' for the
+        first and second entry respectively.
+
+    The easier part:
+
+        Since we already have the actual roster.Player variables stored
+        in our samenameplayers array, all we need to do is just call
+        and output the information we want via the API functions. 
